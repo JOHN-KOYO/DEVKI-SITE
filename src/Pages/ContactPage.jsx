@@ -1,0 +1,78 @@
+
+import React from 'react'
+
+export default function ContactPage() {
+  return (
+    <div className="inner-page">
+      <section className="page-title container">
+        <span className="eyebrow">CONTACT US</span>
+        <h1>Contact Devki Group.</h1>
+        <p>Talk to our team about products, orders, projects, careers or general enquiries.</p>
+      </section>
+
+      <section className="contact-grid container section-space">
+        <div className="contact-left">
+          <article className="contact-card red-card">
+            <span className="eyebrow">PREFER WHATSAPP?</span>
+            <h2>Chat with our team.</h2>
+            <p>Get quick help with products, availability and orders.</p>
+            <a className="red-button" href="https://wa.me/2540737261712">
+              Chat Us
+            </a>
+          </article>
+
+          <article className="contact-card">
+            <span className="eyebrow">VISIT US</span>
+            <h2>Nairobi, Kenya</h2>
+            <p>Devki Group headquarters and central offices.</p>
+          </article>
+
+          <div className="contact-details">
+            <div>
+              <span>EMAIL</span>
+              <b>Royoltymireho@gmail.com</b>
+            </div>
+            <div>
+              <span>PHONE</span>
+              <b>+254737261712</b>
+            </div>
+          </div>
+        </div>
+
+        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <span className="eyebrow">SEND AN ENQUIRY</span>
+          
+          <label>
+            Name
+            <input placeholder="Your name" />
+          </label>
+
+          <label>
+            Email
+            <input type="email" placeholder="you@example.com" />
+          </label>
+
+          <label>
+            Subject
+            <select defaultValue="">
+              <option value="" disabled>Select a subject</option>
+              <option>Product enquiry</option>
+              <option>Order</option>
+              <option>General enquiry</option>
+              <option>Careers</option>
+            </select>
+          </label>
+
+          <label>
+            Message
+            <textarea rows={5} placeholder="How can we help?" />
+          </label>
+
+          <button className="red-button" type="submit">
+            SEND MESSAGE
+          </button>
+        </form>
+      </section>
+    </div>
+  )
+}
